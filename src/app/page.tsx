@@ -1,26 +1,22 @@
+import { Header } from '@/components/Header'
+import { Info } from '@/components/Info'
 import { ServiceCard } from '@/components/ServiceCard'
 import { services } from '@/data/services'
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-4xl p-6">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold">
-          HomeCareHub
-        </h1>
-
-        <p className="mt-2 text-gray-600">
-          Voice-first assistance requests for independent living.
-        </p>
-      </header>
-
-      <section className="grid gap-4 sm:grid-cols-2">
-        {services.map(service => (
-          <ServiceCard
-            key={service.id}
-            service={service}
-          />
-        ))}
+    <main className="min-h-screen bg-background">
+      <Header />
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <Info />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
+          {services.map(service => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+            />
+          ))}
+        </div>
       </section>
     </main>
   )
