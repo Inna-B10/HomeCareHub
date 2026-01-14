@@ -6,13 +6,8 @@
   --pure-white: #f6f6f6;
   --light-accent: #287094;
   --dark-accent: #00538e;
-
+  --light-coffee: #d4d4ce;
 }
-
-/*
-#d4d4ce
-*/
-
 
 @theme inline {
   --color-background: var(--background);

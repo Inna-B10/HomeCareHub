@@ -1,12 +1,9 @@
-import { Header } from '@/components/Header'
 import { Info } from '@/components/Info'
 import { ServiceCard } from '@/components/ServiceCard'
 import { services } from '@/data/services'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
       <section className="max-w-6xl mx-auto px-4 py-8">
         <Info />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6">
@@ -18,6 +15,5 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </main>
   )
 }

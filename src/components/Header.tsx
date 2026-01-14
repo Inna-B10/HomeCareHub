@@ -12,7 +12,7 @@ export function Header() {
                 <h1 className="text-3xl font-bold">HomeCareHub</h1>
             </div>
             <p className='text-center'>
-              Voice-first assistance requests for independent living.
+              Voice-first assistance requests for independent living
             </p>
           </div>
         </div>
