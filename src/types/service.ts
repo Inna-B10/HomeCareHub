@@ -5,5 +5,12 @@ export type Service = {
   icon: LucideIcon
   title: string
   shortDesc: string
+  //voiceKeywords: 
   slug: string
+
+  guide: {
+    intro: string
+    steps: string[]
+    notes?: string[]
+  }
 }
