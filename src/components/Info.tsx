@@ -2,7 +2,7 @@ import { InfoIcon, Volume2Icon } from 'lucide-react'
 
 export function Info() {
   return(
-    <div className='flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between text-lg mb-8 bg-white p-4 rounded-lg shadow'>
+    <div className='flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between text-lg mb-8 bg-white p-4 rounded-lg shadow'>
       <div className='flex gap-2 items-center'>
         <InfoIcon className='hidden md:inline-flex align-bottom mr-2 text-white w-16 h-16 lg:w-12 lg:h-12 fill-light-accent' />
         <p className="text-center md:text-left">
