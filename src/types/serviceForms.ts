@@ -32,7 +32,7 @@ export interface TransportForm extends BaseRequestForm {
 export interface HomeMaintenanceForm extends BaseRequestForm {
   serviceType: 'home-maintenance'
   homeTaskType: 'minor-repair' | 'technical-setup' | 'household-help' | 'safety-check' | 'other'
-  preferredVisitTime?: 'morning' | 'afternoon' | 'no-preference'
+  preferredTime?: 'morning' | 'afternoon' | 'no-preference'
 }
 
 // -----------------------------
@@ -41,7 +41,7 @@ export interface HomeMaintenanceForm extends BaseRequestForm {
 export interface PersonalCareForm extends BaseRequestForm {
   serviceType: 'personal-care'
   personalCareType: 'haircut' | 'nails' | 'shave' | 'other'
-  preferredVisitTime?: 'morning' | 'afternoon' | 'no-preference'
+  preferredTime?: 'morning' | 'afternoon' | 'no-preference'
 }
 
 // -----------------------------
@@ -50,7 +50,7 @@ export interface PersonalCareForm extends BaseRequestForm {
 export interface GroceryForm extends BaseRequestForm {
   serviceType: 'grocery-shopping'
   groceryRequestType: 'missing-items' | 'extra-purchase'
-  preferredDeliveryTime?: 'morning' | 'afternoon' | 'no-preference'
+  preferredTime?: 'morning' | 'afternoon' | 'no-preference'
 }
 
 // -----------------------------
@@ -59,7 +59,7 @@ export interface GroceryForm extends BaseRequestForm {
 export interface MedicineDeliveryForm extends BaseRequestForm {
   serviceType: 'medicine-delivery'
   prescriptionReference: string   // фиксированный или из системы
-  preferredDeliveryTime?: 'morning' | 'afternoon' | 'no-preference'
+  preferredTime?: 'morning' | 'afternoon' | 'no-preference'
 }
 
 // -----------------------------

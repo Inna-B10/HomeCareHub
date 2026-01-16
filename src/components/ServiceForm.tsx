@@ -2,6 +2,7 @@
 
 import { ServiceRequestForm } from '@/types/serviceForms'
 import { useState } from 'react'
+import { PreferredTime } from './PreferredTime'
 
 type Props<T extends ServiceRequestForm> = {
   serviceType: T['serviceType']
@@ -106,18 +107,8 @@ export function ServiceForm<T extends ServiceRequestForm>({ serviceType }: Props
                 <option value="other">Другое</option>
               </select>
             </label>
-  
-            <label>
-              Предпочтительное время визита
-              <select
-                value={(formState as any).preferredVisitTime || ''}
-                onChange={e => handleChange('preferredVisitTime' as any, e.target.value)}
-              >
-                <option value="no-preference">Без предпочтений</option>
-                <option value="morning">Утро</option>
-                <option value="afternoon">День</option>
-              </select>
-            </label>
+
+            <PreferredTime label='Предпочтительное время визита' value={(formState as any).preferredTime} onChange={e => handleChange('preferredTime' as any, e.target.value)}/>
           </>
         )}
         {serviceType === 'personal-care' && (
@@ -135,18 +126,8 @@ export function ServiceForm<T extends ServiceRequestForm>({ serviceType }: Props
                 <option value="other">Другое</option>
               </select>
             </label>
-  
-            <label>
-              Предпочтительное время визита
-              <select
-                value={(formState as any).preferredVisitTime || ''}
-                onChange={e => handleChange('preferredVisitTime' as any, e.target.value)}
-              >
-                <option value="no-preference">Без предпочтений</option>
-                <option value="morning">Утро</option>
-                <option value="afternoon">День</option>
-              </select>
-            </label>
+
+            <PreferredTime label='Предпочтительное время визита' value={(formState as any).preferredTime} onChange={e => handleChange('preferredTime' as any, e.target.value)}/>
           </>
         )}
   
@@ -163,18 +144,8 @@ export function ServiceForm<T extends ServiceRequestForm>({ serviceType }: Props
                 <option value="extra-purchase">Дополнительная покупка</option>
               </select>
             </label>
-  
-            <label>
-              Предпочтительное время доставки
-              <select
-                value={(formState as any).preferredDeliveryTime || ''}
-                onChange={e => handleChange('preferredDeliveryTime' as any, e.target.value)}
-              >
-                <option value="no-preference">Без предпочтений</option>
-                <option value="morning">Утро</option>
-                <option value="afternoon">День</option>
-              </select>
-            </label>
+
+            <PreferredTime label='Предпочтительное время доставки' value={(formState as any).preferredTime} onChange={e => handleChange('preferredTime' as any, e.target.value)}/>
           </>
         )}
   
@@ -189,24 +160,14 @@ export function ServiceForm<T extends ServiceRequestForm>({ serviceType }: Props
                 placeholder="Название рецепта"
               />
             </label>
-  
-            <label>
-              Предпочтительное время доставки
-              <select
-                value={(formState as any).preferredDeliveryTime || ''}
-                onChange={e => handleChange('preferredDeliveryTime' as any, e.target.value)}
-              >
-                <option value="no-preference">Без предпочтений</option>
-                <option value="morning">Утро</option>
-                <option value="afternoon">День</option>
-              </select>
-            </label>
+
+            <PreferredTime label='Предпочтительное время доставки' value={(formState as any).preferredTime} onChange={e => handleChange('preferredTime' as any, e.target.value)}/>
           </>
         )}
   
         {serviceType === 'contact-social-worker' && (
           <label>
-            Сообщение
+            Сообщение куратору
             <textarea
               value={(formState as any).comment || ''}
               onChange={e => handleChange('comment' as any, e.target.value)}
@@ -215,7 +176,7 @@ export function ServiceForm<T extends ServiceRequestForm>({ serviceType }: Props
             />
           </label>
         )}
-</div>
+      </div>
 
       {/* //*------------------------------- Submit Button  */}
       <button
